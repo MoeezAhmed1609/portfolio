@@ -7,7 +7,7 @@ import StyledButton from "./styledButton";
 import { Link } from "react-router-dom";
 import experiences from "../data/experiences";
 
-const Experiences = () => {
+const Experiences = ({ length }) => {
   return (
     <Box sx={{ minHeight: "100vh", width: "100%" }}>
       <Grid container sx={{ padding: { xs: "4.5vh", sm: "6vh", md: "9vh" } }}>
@@ -25,7 +25,7 @@ const Experiences = () => {
             My Experiences
           </Typography>
         </Grid>
-        {experiences.slice(0, 3).map((project, i) => (
+        {experiences.slice(0, length).map((project, i) => (
           <Grid item xs={12} sm={6} md={4} sx={{ padding: "2vh" }}>
             <ExperienceCard project={project} height={"200px"} />
           </Grid>

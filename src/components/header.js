@@ -69,7 +69,7 @@ function Header() {
               <img src={ahmed} alt="boomwear" className="sign-logo" />
             </Link>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ display: { xs: "flex", sm: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -77,7 +77,9 @@ function Header() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
             >
-              <MenuIcon />
+              <MenuIcon
+                sx={{ fontSize: "32px", color: "black", paddingTop: "5vh" }}
+              />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -99,7 +101,10 @@ function Header() {
             >
               {pages.map((page, index) => (
                 <MenuItem key={index} onClick={handleCloseNavMenu}>
-                  <Link to={page.link} style={{ textDecoration: "none" }}>
+                  <Link
+                    to={page.link}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
                     <Typography
                       textAlign="center"
                       sx={{ fontFamily: "Poppins, sans-serif" }}
@@ -115,12 +120,11 @@ function Header() {
             sx={{
               display: {
                 xs: "none",
-                md: "flex",
-                width: "33.33%",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                height: "120px",
+                sm: "flex",
               },
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: "120px",
             }}
           >
             {pages.map((page, index) => (

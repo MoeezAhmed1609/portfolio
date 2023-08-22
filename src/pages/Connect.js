@@ -46,7 +46,8 @@ const Connect = () => {
         >
           <Grid
             item
-            xs={5}
+            xs={12}
+            sm={5}
             sx={{
               padding: { xs: "3vh", sm: "4vh", md: "6vh" },
               minHeight: "70vh",
@@ -97,7 +98,8 @@ const Connect = () => {
           </Grid>
           <Grid
             item
-            xs={7}
+            xs={12}
+            sm={7}
             sx={{
               padding: { xs: "3vh", sm: "4vh", md: "1vh 6vh" },
               display: "flex",

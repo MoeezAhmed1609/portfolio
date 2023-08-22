@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // Data
 import projects from "../data/projects";
 
-const Projects = () => {
+const Projects = ({ length }) => {
   return (
     <Box sx={{ minHeight: "100vh", width: "100%" }}>
       <Grid container sx={{ padding: { xs: "4.5vh", sm: "6vh", md: "9vh" } }}>
@@ -26,8 +26,8 @@ const Projects = () => {
             My Projects
           </Typography>
         </Grid>
-        {projects.slice(0, 3).map((project, i) => (
-          <Grid item xs={12} sm={6} md={4} sx={{ padding: "2vh" }}>
+        {projects.slice(0, length).map((project, i) => (
+          <Grid item xs={12} sm={6} md={4} key={i} sx={{ padding: "2vh" }}>
             <ProjectCard project={project} />
           </Grid>
         ))}
