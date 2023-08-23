@@ -10,6 +10,11 @@ import { AiOutlinePhone } from "react-icons/ai";
 
 const connections = [
   {
+    title: "Upwork",
+    link: "https://www.upwork.com/freelancers/~01cccc73c8983e8514",
+    icon: <SiUpwork />,
+  },
+  {
     title: "Github",
     link: "https://github.com/MoeezAhmed1609",
     icon: <SiGithub />,
@@ -21,14 +26,10 @@ const connections = [
   },
   {
     title: "LinkedIn",
-    link: "https://www.linkedin.com/in/moiz-ahmed-aa2505194/",
+    link: "https://www.linkedin.com/in/moeez-ahmed-061b78289/",
     icon: <SiLinkedin />,
   },
-  {
-    title: "UpWork",
-    link: "https://www.upwork.com/",
-    icon: <SiUpwork />,
-  },
+
   {
     title: "Gmail",
     link: "mailto:moeezahmed.saeed@gmail.com",

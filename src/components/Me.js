@@ -5,29 +5,10 @@ import { Link } from "react-router-dom";
 // Assets
 import face from "../assets/face.png";
 import name from "../assets/title.png";
-// Icons
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+// Component
+import connections from "../data/connections";
 
 const Me = () => {
-  const links = [
-    {
-      icon: <GitHubIcon sx={{ fontSize: "5vh" }} />,
-      title: "Github",
-      link: "https://github.com/MoeezAhmed1609",
-    },
-    {
-      icon: <LinkedInIcon sx={{ fontSize: "5vh" }} />,
-      title: "LinkedIn",
-      link: "https://www.linkedin.com/in/moiz-ahmed-aa2505194/",
-    },
-    {
-      icon: <WhatsAppIcon sx={{ fontSize: "5vh" }} />,
-      title: "WhatsApp",
-      link: "https://wa.me/923113868525",
-    },
-  ];
   return (
     <Grid container>
       <Grid
@@ -88,9 +69,9 @@ const Me = () => {
           flexDirection: "column",
         }}
       >
-        {links.map((link, i) => (
+        {connections.slice(0, 4).map((link, i) => (
           <Link to={link.link} key={i} target="_blank">
-            <Tooltip title={link.title}>
+            <Tooltip title={link.title} placement="right">
               <IconButton size={"large"} sx={{ color: "black" }}>
                 {link.icon}
               </IconButton>
