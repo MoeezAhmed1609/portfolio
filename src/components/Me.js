@@ -3,7 +3,7 @@ import React from "react";
 import { Grid, Box, Tooltip, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 // Assets
-import face from "../assets/face.png";
+// import face from "../assets/face.png";
 import name from "../assets/title.png";
 // Component
 import connections from "../data/connections";
@@ -15,11 +15,11 @@ const Me = () => {
         item
         xs={12}
         sx={{
-          backgroundImage: `url(${face})`,
-          backgroundSize: { xs: "76vh", sm: "128vh" },
-          backgroundRepeat: "no-repeat",
+          // backgroundImage: `url(${face})`,
+          // backgroundSize: { xs: "76vh", sm: "128vh" },
+          // backgroundRepeat: "no-repeat",
+          // backgroundPosition: "bottom",
           height: "100vh",
-          backgroundPosition: "bottom",
         }}
       >
         <Box
