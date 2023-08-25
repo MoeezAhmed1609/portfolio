@@ -41,6 +41,7 @@ const Info = () => {
     "Project Management",
     "Problem Solving",
     "Time Management",
+    "Continuous Integration and Continuous Deployment (CICD)",
   ];
   return (
     <Box
@@ -136,45 +137,40 @@ const Info = () => {
                     marginTop: "0",
                   }}
                 >
-                  {softSkills.map((skill, i) => (
-                    <li key={i} style={{ width: "45%", marginLeft: "10px" }}>
-                      <Typography
-                        variant="subtitle1"
-                        sx={{ fontFamily: "Poppins , sans-serif" }}
-                      >
-                        {skill}
-                      </Typography>
-                    </li>
-                  ))}
+                  {softSkills.map((skill, i) => {
+                    if (i + 1 === softSkills.length) {
+                      return (
+                        <li
+                          key={i}
+                          style={{ width: "95%", marginLeft: "10px" }}
+                        >
+                          <Typography
+                            variant="subtitle1"
+                            sx={{ fontFamily: "Poppins , sans-serif" }}
+                          >
+                            {skill}
+                          </Typography>
+                        </li>
+                      );
+                    } else {
+                      return (
+                        <li
+                          key={i}
+                          style={{ width: "45%", marginLeft: "10px" }}
+                        >
+                          <Typography
+                            variant="subtitle1"
+                            sx={{ fontFamily: "Poppins , sans-serif" }}
+                          >
+                            {skill}
+                          </Typography>
+                        </li>
+                      );
+                    }
+                  })}
                 </ul>
               </Box>
             </Grid>
-            {/* <Grid item xs={6} sx={{ paddingLeft: "7px" }}>
-              <Box
-                sx={{
-                  //   height: "40%",
-                  boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-                  padding: "4vh",
-                  marginTop: "15px",
-                }}
-              >
-                <Typography
-                  variant="h5"
-                  sx={{
-                    textTransform: "uppercase",
-                    fontWeight: "600",
-                  }}
-                  gutterBottom
-                >
-                  Academic Qualification
-                </Typography>
-                <Typography variant="h6">Intermediate</Typography>
-                <Typography variant="h6">Pre-Engineering</Typography>
-                <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                  2022
-                </Typography>
-              </Box>
-            </Grid> */}
           </Grid>
         </Grid>
         <Grid item xs={12} sm={7}>

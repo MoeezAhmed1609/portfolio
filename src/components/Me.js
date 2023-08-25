@@ -63,7 +63,7 @@ const Me = () => {
         sx={{
           height: "30vh",
           position: "absolute",
-          top: { xs: "calc(50% + 10vh)", sm: "calc(50% - 15vh)" },
+          top: { xs: "calc(50% + 2.5vh)", sm: "calc(50% - 15vh)" },
           left: "10px",
           display: "flex",
           flexDirection: "column",
