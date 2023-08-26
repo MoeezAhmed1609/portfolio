@@ -1,12 +1,15 @@
 import React from "react";
 // MUI
-import { Grid, Box, Tooltip, IconButton } from "@mui/material";
+import { Grid, Box, Tooltip, IconButton, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 // Assets
 // import face from "../assets/face.png";
 import name from "../assets/title.png";
 // Component
 import connections from "../data/connections";
+import StyledButton from "./styledButton";
+import { GrDocumentPdf } from "react-icons/gr";
+import resume from "../assets/MyResume.pdf";
 
 const Me = () => {
   return (
@@ -28,9 +31,28 @@ const Me = () => {
             display: { xs: "none", md: "flex" },
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column",
           }}
         >
           <img src={name} alt="Moeez Ahmed" style={{ height: "150px" }} />
+          <a
+            href={resume}
+            download="MoeezAhmedResume"
+            target="_blank"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <StyledButton
+              title={
+                <Typography sx={{ display: "flex", alignItems: "center" }}>
+                  <GrDocumentPdf
+                    style={{ fontSize: "24px", paddingRight: "8px" }}
+                  />{" "}
+                  Download Resume
+                </Typography>
+              }
+              mode={"light"}
+            />
+          </a>
         </Box>
         <Box
           sx={{
@@ -38,6 +60,7 @@ const Me = () => {
             display: { xs: "flex", sm: "none", md: "none" },
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column",
           }}
         >
           <img
@@ -45,6 +68,24 @@ const Me = () => {
             alt="Moeez Ahmed"
             style={{ height: "70px", marginTop: "-30%" }}
           />
+          <a
+            href={resume}
+            download="MoeezAhmedResume"
+            target="_blank"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <StyledButton
+              title={
+                <Typography sx={{ display: "flex", alignItems: "center" }}>
+                  <GrDocumentPdf
+                    style={{ fontSize: "24px", paddingRight: "8px" }}
+                  />{" "}
+                  Download Resume
+                </Typography>
+              }
+              mode={"light"}
+            />
+          </a>
         </Box>
         <Box
           sx={{
@@ -52,9 +93,28 @@ const Me = () => {
             display: { xs: "none", sm: "flex", md: "none" },
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column",
           }}
         >
           <img src={name} alt="Moeez Ahmed" style={{ height: "110px" }} />
+          <a
+            href={resume}
+            download="MoeezAhmedResume"
+            target="_blank"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <StyledButton
+              title={
+                <Typography sx={{ display: "flex", alignItems: "center" }}>
+                  <GrDocumentPdf
+                    style={{ fontSize: "24px", paddingRight: "8px" }}
+                  />{" "}
+                  Download Resume
+                </Typography>
+              }
+              mode={"light"}
+            />
+          </a>
         </Box>
       </Grid>
       <Grid
